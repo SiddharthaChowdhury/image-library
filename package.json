@@ -1,0 +1,30 @@
+{
+  "name": "image-library",
+  "version": "1.0.0",
+  "description": "Simple image library to upload and hold images. Provides link to fetch the image.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Siddhartha Chowdhury",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiddharthaChowdhury/image-library.git"
+  },
+  "keywords": [
+    "image-library",
+    "gallery",
+    "image-upload",
+    "files",
+    "file-upload"
+  ],
+  "bugs": {
+    "url": "https://github.com/SiddharthaChowdhury/image-library/issues"
+  },
+  "homepage": "https://github.com/SiddharthaChowdhury/image-library#readme"
+}
