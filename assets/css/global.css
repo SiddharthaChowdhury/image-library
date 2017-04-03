@@ -58,8 +58,11 @@ select.image-thumb-sort{
     overflow-y:auto;
 }
 .img-thumbnail{ cursor: pointer;}
+
+
+.image-meta-cont{max-height: 80vh; overflow: auto;}
 .chosen-image{
-    max-width: 200px;
+    max-width: 150px;
     max-height: 300px;
 }
 table#image-meta tr td{padding: 0px 5px;}
