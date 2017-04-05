@@ -125,8 +125,7 @@ $Incoming.prototype._processFiles = function(files){
         ajax.setRequestHeader("encType", "multipart/form-data");
         ajax.upload.addEventListener("progress", (function(progressDOM){
             return function(event) {
-                if(ajax.status != 0)
-                    ___updateProgressStatus(event, progressDOM);
+                ___updateProgressStatus(event, progressDOM);
             };
         })(progressDOM), false);
         ajax.addEventListener("load", (function(progressDOM){
