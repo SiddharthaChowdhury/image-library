@@ -1,5 +1,15 @@
 $(document).ready(function(){
 	// tooltip
-    $('[data-tooltip="true"]').tooltip(); 
-
+	if($('#upload-section').length != 0){
+		$('[data-tooltip="true"]').tooltip(); 
+	    var x = new $Incoming({
+			dropAreaID : "#upload-section", // this element should have fixed height,
+			uploadURL : "/upload",
+			method: "POST", // 'GET' or 'POST'
+			handlerName: "incoming",
+			uploadSuccess: function(data){
+				console.log(data)
+			}
+		});
+	}
 });

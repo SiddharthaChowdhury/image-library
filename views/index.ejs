@@ -18,15 +18,19 @@
 					<li>Documents</li>
 					<li><hr></li>
 					<li>Create gallery</li>
+					<li>Recent uploads</li>
+					<li>Recent modified</li>
 				</ul>
 			</div>
 			<div class="col-md-10 body-content">
+				
+				<% if(section == "library") {%>
 				<div class="col-md-12">
 					<h3 class="active-tab-text">Media library</h3>
-					<button class="btn btn-default">Upload files</button>
-					<button class="btn btn-default active-tab">Media library</button>
+					<a href="/upload-files-page" class="btn btn-default"><i class="fa fa-upload" aria-hidden="true"></i> Upload files</a>
+					<a href="/image-library-page" class="btn btn-default active-tab"><i class="fa fa-th" aria-hidden="true"></i> Media library</a>
 				</div>
-				<div class="row">
+				<div class="row" id="gallery-row">
 					<div class="col-md-8 image-thumb-cont">
 						<div class="col-md-12 image-filters">
 							<select class="pull-left image-thumb-sort">
@@ -106,10 +110,24 @@
 						</div>
 					</div>
 				</div>
+				<%}%>
+				<% if(section == "upload") {%>
+				<div class="col-md-12">
+					<h3 class="active-tab-text">Upload files</h3>
+					<a href="/upload-files-page" class="btn btn-default active-tab"><i class="fa fa-upload" aria-hidden="true"></i> Upload files</a>
+					<a href="/image-library-page" class="btn btn-default"><i class="fa fa-th" aria-hidden="true"></i> Media library</a>
+				</div>
+				<div class="row" id="upload-row">
+					<div id="upload-section">
+					</div>
+				</div>
+				<%}%>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="<%= host %>/js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="<%= host %>/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<%= host %>/js/si_incoming.js"></script>
+	<script type="text/javascript" src="<%= host %>/js/global.js"></script>
 </body>
 </html>
